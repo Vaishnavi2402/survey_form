@@ -23,7 +23,6 @@ st.write("Please fill out this survey. Your feedback will help improve public se
 st.header("Respondent Details")
 name = st.text_input("Your Name:", help="Please enter your full name.")
 age = st.number_input("Your Age:", min_value=18, max_value=120, step=1, help="You must be at least 18 years old to participate.")
-survey_number = st.text_input("Enter your Survey Number:", help="Survey number should be alphanumeric.")
 area = st.selectbox("Select your area:", ["Select"] + areas, help="Choose your area from the dropdown.")
 
 # Check for mandatory fields
@@ -31,10 +30,6 @@ if not name:
     st.warning("Please enter your name.")
 if age < 18:
     st.warning("You must be at least 18 years old to participate.")
-if not survey_number:
-    st.warning("Please enter your Survey Number.")
-elif not survey_number.isalnum():
-    st.warning("Survey number should be alphanumeric.")
 if area == "Select":
     st.warning("Please select your area.")
 
