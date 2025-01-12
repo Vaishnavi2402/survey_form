@@ -151,7 +151,6 @@ if name and age >= 18 and area != "Select":
     if st.button("Submit"):
         # Prepare data for saving
         row_data = {
-            "Survey Number": survey_number,
             "Name": name,
             "Age": age,
             "Area": area,
