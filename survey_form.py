@@ -63,7 +63,7 @@ except FileNotFoundError:
 responses = {}
 
 # If basic info is completed, allow users to fill out the ratings section
-if name and age >= 18 and survey_number and survey_number.isalnum() and area != "Select":
+if name and age >= 18 and area != "Select":
     st.success("Thank you for providing your details. You can now proceed with the survey.")
 
     # Feedback sections
